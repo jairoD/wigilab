@@ -6,6 +6,7 @@ import 'package:wigilab_test/models/firebase_user_model.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wigilab_test/pages/home/widgets/country_selector.dart';
 import 'package:wigilab_test/pages/home/widgets/user_info_form.dart';
+import 'package:wigilab_test/widgets/my_button.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({Key key}) : super(key: key);
@@ -41,6 +42,10 @@ class MyDrawer extends StatelessWidget {
               ),
               UserInfoForm(currentUser: user),
               SizedBox(height: 100.h),
+              MyButton(
+                text: "Cerrar sesión",
+                function: () => FirebaseAuthServices().firebaseSignOut(),
+              )
             ]);
           }
         },

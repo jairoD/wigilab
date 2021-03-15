@@ -15,14 +15,6 @@ class PlaylistBox extends StatelessWidget {
   Widget build(BuildContext context) {
     final spotifyProviderReader = context.read<SpotifyProvider>();
     return GestureDetector(
-      onTap: () {
-        spotifyProviderReader.selectPlayList(playlist);
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => PlaylistPage(),
-            ));
-      },
       child: Container(
         width: 150.w,
         child: Column(

@@ -64,12 +64,6 @@ class LoginPage extends StatelessWidget {
                     faicon: FaIcon(FontAwesomeIcons.google),
                     text: "Iniciar sesión con Google ",
                     function: () => loginGoogle(context),
-                  ),
-                  MyButton(
-                    width: double.infinity,
-                    faicon: FaIcon(FontAwesomeIcons.facebook),
-                    text: "Iniciar sesión con Facebook ",
-                    function: () => print("a"),
                   )
                 ],
               ),
