@@ -2,15 +2,9 @@
 
 A new Flutter project.
 
-## Getting Started
+## Contacto
 
-This project is a starting point for a Flutter application.
+jairodz98@gmail.com
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## ¿Por qué Flutter?
+Desde los ultimos semestres de la universidad conoci el SDK y empece a hacer algunas pruebas y ejemplos para irme acostumbrando a la herramienta, luego al ver la comunidad en constante crecimiento y la empresa que estaba detras de el decidi que seria lo que usaria para desarrollo movil ya que con pocas configuraciones y un solo codigo es posible usar la aplicacion tanto en Android como iOS y actualmente Web (stable).
