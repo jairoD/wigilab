@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "176538212678",
+    "project_id": "wigilabs-5d7c4",
+    "storage_bucket": "wigilabs-5d7c4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:176538212678:android:1f64ef0764edc4cb766d47",
+        "android_client_info": {
+          "package_name": "com.wigilab.wigilab_test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "176538212678-5ig7cekf7te37ieq2rih5qru221uajd9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wigilab.wigilab_test",
+            "certificate_hash": "4df390ad0c309afa385b41b20840564e63d64df5"
+          }
+        },
+        {
+          "client_id": "176538212678-4fqeo4n0bur4c7sttn2h16969ileos8a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLR8dy8HGdTcA64x6wab9d3LzJWJRaJ20"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "176538212678-4fqeo4n0bur4c7sttn2h16969ileos8a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
