@@ -7,6 +7,8 @@ import 'package:provider/provider.dart';
 import 'package:wigilab_test/pages/home/widgets/last_releases.dart';
 import 'package:wigilab_test/providers/spotify_provider.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:wigilab_test/widgets/my_appbar.dart';
+import 'package:wigilab_test/widgets/my_title.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -25,24 +27,19 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     final spotifyProviderWatcher = context.watch<SpotifyProvider>();
     return Scaffold(
-      appBar: AppBar(),
+      backgroundColor: Colors.black,
+      appBar: MyAppbar(),
       drawer: MyDrawer(),
       body: ListView(
         padding: EdgeInsets.all(15.w),
         children: [
           CountrySelector(),
           SizedBox(height: 15.h),
-          Text(
-            "Top Categorias: ",
-            style: TextStyle(fontSize: 20.h, fontWeight: FontWeight.bold),
-          ),
+          MyTitle(title: "Top Categorias: ", multiline: false),
           SizedBox(height: 15.h),
           Categories(categories: spotifyProviderWatcher.categories),
           SizedBox(height: 15.h),
-          Text(
-            "Ultimos lanzamientos: ",
-            style: TextStyle(fontSize: 20.h, fontWeight: FontWeight.bold),
-          ),
+          MyTitle(title: "Ultimos lanzamientos: ", multiline: false),
           SizedBox(height: 15.h),
           LastReleases(releases: spotifyProviderWatcher.lastReleases)
         ],
