@@ -6,7 +6,9 @@ import 'package:wigilab_test/models/firebase_user_model.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wigilab_test/pages/home/widgets/country_selector.dart';
 import 'package:wigilab_test/pages/home/widgets/user_info_form.dart';
+import 'package:wigilab_test/widgets/box_title.dart';
 import 'package:wigilab_test/widgets/my_button.dart';
+import 'package:wigilab_test/widgets/my_title.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({Key key}) : super(key: key);
@@ -31,22 +33,23 @@ class MyDrawer extends StatelessWidget {
           } else {
             final FirebaseUserModel user =
                 FirebaseUserModel.fromMap(snapshot.data.data());
-            return ListView(padding: EdgeInsets.all(10.w), children: [
-              DrawerHeader(
-                child: Center(
-                  child: Text(
-                    "Información de usuario",
-                    style: TextStyle(fontSize: 22.h),
+            return Container(
+              color: Colors.black,
+              child: ListView(padding: EdgeInsets.all(10.w), children: [
+                DrawerHeader(
+                  child: Center(
+                    child: BoxTitle(
+                        title: "Información de usuario", multiline: false),
                   ),
                 ),
-              ),
-              UserInfoForm(currentUser: user),
-              SizedBox(height: 100.h),
-              MyButton(
-                text: "Cerrar sesión",
-                function: () => FirebaseAuthServices().firebaseSignOut(),
-              )
-            ]);
+                UserInfoForm(currentUser: user),
+                SizedBox(height: 100.h),
+                MyButton(
+                  text: "Cerrar sesión",
+                  function: () => FirebaseAuthServices().firebaseSignOut(),
+                )
+              ]),
+            );
           }
         },
       ),

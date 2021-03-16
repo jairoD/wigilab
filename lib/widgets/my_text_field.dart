@@ -17,9 +17,10 @@ class MyTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      style: TextStyle(color: Colors.white),
       keyboardType: keyboardType,
       obscureText: obscureText ?? false,
-      cursorColor: Colors.black,
+      cursorColor: Colors.white,
       controller: controller,
       validator: (value) {
         if (value.isEmpty) {
@@ -32,12 +33,12 @@ class MyTextField extends StatelessWidget {
           hoverColor: Colors.red,
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(5.h),
-              borderSide: BorderSide(color: Colors.black)),
+              borderSide: BorderSide(color: Colors.white)),
           enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(5.h),
-              borderSide: BorderSide(color: Colors.grey)),
+              borderSide: BorderSide(color: Colors.white)),
           labelText: labelText,
-          labelStyle: TextStyle(color: Colors.black)),
+          labelStyle: TextStyle(color: Colors.white)),
     );
   }
 }

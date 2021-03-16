@@ -5,6 +5,7 @@ import 'package:wigilab_test/widgets/Alerts.dart';
 import 'package:wigilab_test/widgets/my_button.dart';
 import 'package:wigilab_test/widgets/my_text_field.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:wigilab_test/widgets/my_title.dart';
 
 class LoginPage extends StatelessWidget {
   final formLoginKey = GlobalKey<FormState>();
@@ -13,25 +14,21 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[200],
+      backgroundColor: Colors.grey[400],
       body: Center(
         child: SingleChildScrollView(
           child: Container(
             margin: EdgeInsets.all(15.h),
             padding: EdgeInsets.all(15.h),
             decoration: BoxDecoration(
-                color: Colors.white, borderRadius: BorderRadius.circular(5.h)),
-            constraints: BoxConstraints(maxHeight: 400.w, maxWidth: 250.w),
+                color: Colors.black, borderRadius: BorderRadius.circular(5.h)),
+            constraints: BoxConstraints(maxHeight: 400.h, maxWidth: 250.w),
             child: Form(
               key: formLoginKey,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Text(
-                    "Iniciar Sesión",
-                    style:
-                        TextStyle(fontSize: 28.h, fontWeight: FontWeight.bold),
-                  ),
+                  MyTitle(title: "Iniciar Sesión", multiline: false),
                   MyTextField(
                       labelText: "Email",
                       keyboardType: TextInputType.emailAddress,

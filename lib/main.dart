@@ -38,6 +38,7 @@ class MyApp extends StatelessWidget {
                       '/home': (context) => HomePage()
                     },
                     title: 'Flutter Demo',
+                    debugShowCheckedModeBanner: false,
                     theme: ThemeData(
                       // is not restarted.
                       primarySwatch: Colors.blue,

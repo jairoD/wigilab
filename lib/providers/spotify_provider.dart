@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:wigilab_test/data/services/spotify/spotify_service.dart';
+import 'package:wigilab_test/models/artist_details.dart';
+import 'package:wigilab_test/models/artist_model.dart';
 import 'package:wigilab_test/models/category_spotify.dart';
 import 'package:wigilab_test/models/playlist_category.dart';
+import 'package:wigilab_test/models/playlist_item.dart';
 import 'package:wigilab_test/models/release_model.dart';
-import 'package:wigilab_test/models/track_model.dart';
 
 class SpotifyProvider with ChangeNotifier {
   String country = 'CO';
@@ -12,7 +14,8 @@ class SpotifyProvider with ChangeNotifier {
   Category selectedCategory;
   List<PlayListCategory> playlist = [];
   PlayListCategory playlistSelected;
-  List<Track> tracks;
+  List<PlaylistItem> songs = [];
+  ArtistDetailsModel artistSelected;
 
   void changeCountry(String newCountry) {
     country = newCountry;
@@ -51,10 +54,21 @@ class SpotifyProvider with ChangeNotifier {
 
   Future<void> selectPlayList(PlayListCategory selected) async {
     playlistSelected = selected;
-    final tracksResponse =
+    print(playlistSelected.name);
+    final songsResponse =
         await SpotifyService().getSpotifyPlaylistItems(playlistSelected.id);
-    if (tracksResponse != null) {
-      tracks = tracksResponse;
+    if (songsResponse != null) {
+      songs = songsResponse;
+    }
+
+    notifyListeners();
+  }
+
+  Future<void> selectArtist(String id) async {
+    //artistSelected = newArtist;
+    final artistDetailsResponse = await SpotifyService().getSpotifyArtist(id);
+    if (artistDetailsResponse != null) {
+      artistSelected = artistDetailsResponse;
     }
     notifyListeners();
   }

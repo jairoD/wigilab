@@ -59,4 +59,43 @@ class SpotifyRepository {
       return null;
     }
   }
+
+  Future<ResponseModel> getSpotifyArtist(String id) async {
+    try {
+      final response =
+          await GenericHttpService().getHttp("v1/artists/$id", true);
+      return ResponseModel(
+          data: response.body, statusCode: response.statusCode);
+    } catch (e) {
+      return null;
+    }
+  }
+
+  Future<ResponseModel> getArtistTopTracks(String id) async {
+    try {
+      var queryParameters = {
+        'market': 'ES',
+      };
+      final response = await GenericHttpService()
+          .getHttp("v1/artists/$id/top-tracks", true, query: queryParameters);
+      return ResponseModel(
+          data: response.body, statusCode: response.statusCode);
+    } catch (e) {
+      return null;
+    }
+  }
+
+  Future<ResponseModel> getArtistAlbums(String id) async {
+    try {
+      var queryParameters = {
+        'market': 'ES',
+      };
+      final response = await GenericHttpService()
+          .getHttp("v1/artists/$id/albums", true, query: queryParameters);
+      return ResponseModel(
+          data: response.body, statusCode: response.statusCode);
+    } catch (e) {
+      return null;
+    }
+  }
 }
