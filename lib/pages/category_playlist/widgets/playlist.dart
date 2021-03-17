@@ -27,11 +27,11 @@ class Playlist extends StatelessWidget {
       ),
     );
     /* return Container(
-      height: 190.h,
+      height: 190,
       width: double.infinity,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
-        separatorBuilder: (context, index) => SizedBox(width: 5.w),
+        separatorBuilder: (context, index) => SizedBox(width: 5),
         itemCount: playlist.length,
         itemBuilder: (context, index) => PlaylistBox(playlist[index]),
       ),

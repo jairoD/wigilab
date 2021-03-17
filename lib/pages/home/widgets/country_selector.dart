@@ -15,12 +15,12 @@ class CountrySelector extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         MyTitle(title: "Seleccionar País:", multiline: true),
-        SizedBox(height: 15.h),
+        SizedBox(height: 15),
         Row(
           children: [
             Expanded(
                 child: Container(
-              height: 50.h,
+              height: 50,
               color: spotifyProviderWatcher.country == "CO"
                   ? Colors.white
                   : Colors.transparent,
@@ -31,14 +31,14 @@ class CountrySelector extends StatelessWidget {
                   },
                   child: Text(
                     "🇨🇴",
-                    style: TextStyle(fontSize: 30.h),
+                    style: TextStyle(fontSize: 30),
                   ),
                 ),
               ),
             )),
             Expanded(
                 child: Container(
-              height: 50.h,
+              height: 50,
               color: spotifyProviderWatcher.country != "CO"
                   ? Colors.white
                   : Colors.transparent,
@@ -49,7 +49,7 @@ class CountrySelector extends StatelessWidget {
                   },
                   child: Text(
                     "🇦🇺",
-                    style: TextStyle(fontSize: 30.h),
+                    style: TextStyle(fontSize: 30),
                   ),
                 ),
               ),

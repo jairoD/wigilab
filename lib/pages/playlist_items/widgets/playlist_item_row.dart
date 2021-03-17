@@ -21,20 +21,20 @@ class PlayListItemRow extends StatelessWidget {
         children: [
           Text(
             "# $index",
-            style: TextStyle(fontSize: 14.h, color: Colors.white),
+            style: TextStyle(fontSize: 14, color: Colors.white),
           ),
         ],
       ),
       title: Text(
         song.track.name,
-        style: TextStyle(fontSize: 20.h, color: Colors.white),
+        style: TextStyle(fontSize: 20, color: Colors.white),
       ),
       subtitle: buildArtist(spotifyProviderReader),
       trailing: IconButton(
           icon: Icon(
             Icons.play_circle_outline_rounded,
             color: Colors.white,
-            size: 30.w,
+            size: 30,
           ),
           onPressed: () => print("object")),
     );
@@ -42,8 +42,8 @@ class PlayListItemRow extends StatelessWidget {
 
   Widget buildArtist(SpotifyProvider spotifyProviderReader) {
     return Container(
-      height: 30.h,
-      margin: EdgeInsets.only(top: 5.h),
+      height: 30,
+      margin: EdgeInsets.only(top: 5),
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: song.track.artists.length,
@@ -58,7 +58,7 @@ class PlayListItemRow extends StatelessWidget {
                 ));
           },
           child: Container(
-            padding: EdgeInsets.symmetric(horizontal: 5.h),
+            padding: EdgeInsets.symmetric(horizontal: 5),
             child: Chip(
                 label: Text(
               song.track.artists[index].name,

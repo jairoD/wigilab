@@ -10,7 +10,7 @@ class MyTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(title,
         style: TextStyle(
-            fontSize: 24.h, fontWeight: FontWeight.bold, color: Colors.white),
+            fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
         maxLines: multiline ? 3 : 1,
         overflow: TextOverflow.ellipsis);
   }

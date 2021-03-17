@@ -18,11 +18,11 @@ class LoginPage extends StatelessWidget {
       body: Center(
         child: SingleChildScrollView(
           child: Container(
-            margin: EdgeInsets.all(15.h),
-            padding: EdgeInsets.all(15.h),
+            margin: EdgeInsets.all(15),
+            padding: EdgeInsets.all(15),
             decoration: BoxDecoration(
-                color: Colors.black, borderRadius: BorderRadius.circular(5.h)),
-            constraints: BoxConstraints(maxHeight: 400.h, maxWidth: 250.w),
+                color: Colors.black, borderRadius: BorderRadius.circular(5)),
+            constraints: BoxConstraints(maxHeight: 400, maxWidth: 350),
             child: Form(
               key: formLoginKey,
               child: Column(
@@ -42,12 +42,11 @@ class LoginPage extends StatelessWidget {
                           controller: passwordController,
                           keyboardType: TextInputType.text,
                           obscureText: true),
-                      SizedBox(height: 10.h),
+                      SizedBox(height: 10),
                       GestureDetector(
                         onTap: () => Navigator.pushNamed(context, '/register'),
                         child: Text("Registrar",
-                            style:
-                                TextStyle(color: Colors.blue, fontSize: 12.h)),
+                            style: TextStyle(color: Colors.blue, fontSize: 12)),
                       )
                     ],
                   ),
@@ -61,6 +60,12 @@ class LoginPage extends StatelessWidget {
                     faicon: FaIcon(FontAwesomeIcons.google),
                     text: "Iniciar sesión con Google ",
                     function: () => loginGoogle(context),
+                  ),
+                  MyButton(
+                    width: double.infinity,
+                    faicon: FaIcon(FontAwesomeIcons.facebook),
+                    text: "Iniciar sesión con Facebook ",
+                    function: () => loginFacebook(context),
                   )
                 ],
               ),
@@ -87,6 +92,16 @@ class LoginPage extends StatelessWidget {
   void loginGoogle(BuildContext context) async {
     try {
       final loginResponse = await FirebaseAuthServices().firebaseGoogleLogin();
+    } catch (e) {
+      Alerts.errorFlushbar(context, "Error", "Error al inciar sesión");
+    }
+  }
+
+  void loginFacebook(BuildContext context) async {
+    try {
+      final loginResponse =
+          await FirebaseAuthServices().firebaseFacebookLogin();
+      print(loginResponse);
     } catch (e) {
       Alerts.errorFlushbar(context, "Error", "Error al inciar sesión");
     }

@@ -9,7 +9,7 @@ class BoxTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(title,
-        style: TextStyle(fontSize: 16.h, color: Colors.white),
+        style: TextStyle(fontSize: 16, color: Colors.white),
         maxLines: multiline ? 3 : 1,
         overflow: TextOverflow.ellipsis);
   }

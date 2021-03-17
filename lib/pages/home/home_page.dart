@@ -31,16 +31,16 @@ class _HomePageState extends State<HomePage> {
       appBar: MyAppbar(),
       drawer: MyDrawer(),
       body: ListView(
-        padding: EdgeInsets.all(15.w),
+        padding: EdgeInsets.all(15),
         children: [
           CountrySelector(),
-          SizedBox(height: 15.h),
+          SizedBox(height: 15),
           MyTitle(title: "Top Categorias: ", multiline: false),
-          SizedBox(height: 15.h),
+          SizedBox(height: 15),
           Categories(categories: spotifyProviderWatcher.categories),
-          SizedBox(height: 15.h),
+          SizedBox(height: 15),
           MyTitle(title: "Ultimos lanzamientos: ", multiline: false),
-          SizedBox(height: 15.h),
+          SizedBox(height: 15),
           LastReleases(releases: spotifyProviderWatcher.lastReleases)
         ],
       ),

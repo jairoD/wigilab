@@ -14,17 +14,17 @@ class RegisterPage extends StatelessWidget {
       backgroundColor: Colors.grey[200],
       body: Center(
         child: Container(
-          margin: EdgeInsets.all(15.h),
-          padding: EdgeInsets.all(15.h),
+          margin: EdgeInsets.all(15),
+          padding: EdgeInsets.all(15),
           decoration: BoxDecoration(
-              color: Colors.white, borderRadius: BorderRadius.circular(5.h)),
-          constraints: BoxConstraints(maxHeight: 500.h, maxWidth: 300.h),
+              color: Colors.white, borderRadius: BorderRadius.circular(5)),
+          constraints: BoxConstraints(maxHeight: 500, maxWidth: 300),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Text(
                 "Registrar",
-                style: TextStyle(fontSize: 28.h, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
               ),
               MyTextField(
                   labelText: "Email",
@@ -39,12 +39,12 @@ class RegisterPage extends StatelessWidget {
                       labelText: "Password",
                       keyboardType: TextInputType.text,
                       obscureText: true),
-                  SizedBox(height: 10.h),
+                  SizedBox(height: 10),
                   GestureDetector(
                     onTap: () => Navigator.pop(context),
                     child: Text(
                       "Iniciar sesión",
-                      style: TextStyle(color: Colors.blue, fontSize: 12.h),
+                      style: TextStyle(color: Colors.blue, fontSize: 12),
                     ),
                   )
                 ],
@@ -59,7 +59,7 @@ class RegisterPage extends StatelessWidget {
                 faicon: FaIcon(FontAwesomeIcons.google),
                 text: "Iniciar sesión con Google ",
                 function: () => Get.snackbar("Inicio sesion:", "Google",
-                    maxWidth: 300.h, margin: EdgeInsets.all(8.h)),
+                    maxWidth: 300, margin: EdgeInsets.all(8)),
               ) */
             ],
           ),

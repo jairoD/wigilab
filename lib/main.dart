@@ -26,25 +26,22 @@ class MyApp extends StatelessWidget {
           return Text("Error");
         }
         if (snapshot.connectionState == ConnectionState.done) {
-          return ScreenUtilInit(
-              designSize: Size(360, 690),
-              allowFontScaling: true,
-              builder: () => MaterialApp(
-                    initialRoute: '/root',
-                    routes: {
-                      '/root': (context) => Root(),
-                      '/login': (context) => LoginPage(),
-                      '/register': (context) => RegisterPage(),
-                      '/home': (context) => HomePage()
-                    },
-                    title: 'Flutter Demo',
-                    debugShowCheckedModeBanner: false,
-                    theme: ThemeData(
-                      // is not restarted.
-                      primarySwatch: Colors.blue,
-                    ),
-                    home: Root(),
-                  ));
+          return MaterialApp(
+            initialRoute: '/root',
+            routes: {
+              '/root': (context) => Root(),
+              '/login': (context) => LoginPage(),
+              '/register': (context) => RegisterPage(),
+              '/home': (context) => HomePage()
+            },
+            title: 'Flutter Demo',
+            debugShowCheckedModeBanner: false,
+            theme: ThemeData(
+              // is not restarted.
+              primarySwatch: Colors.blue,
+            ),
+            home: Root(),
+          );
         }
         return Center(child: CircularProgressIndicator());
       },

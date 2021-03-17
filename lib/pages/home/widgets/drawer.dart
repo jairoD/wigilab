@@ -34,8 +34,8 @@ class MyDrawer extends StatelessWidget {
             final FirebaseUserModel user =
                 FirebaseUserModel.fromMap(snapshot.data.data());
             return Container(
-              color: Colors.black,
-              child: ListView(padding: EdgeInsets.all(10.w), children: [
+              color: Colors.grey[400],
+              child: ListView(padding: EdgeInsets.all(10), children: [
                 DrawerHeader(
                   child: Center(
                     child: BoxTitle(
@@ -43,7 +43,7 @@ class MyDrawer extends StatelessWidget {
                   ),
                 ),
                 UserInfoForm(currentUser: user),
-                SizedBox(height: 100.h),
+                SizedBox(height: 100),
                 MyButton(
                   text: "Cerrar sesión",
                   function: () => FirebaseAuthServices().firebaseSignOut(),

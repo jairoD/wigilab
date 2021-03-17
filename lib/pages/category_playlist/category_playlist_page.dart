@@ -16,7 +16,7 @@ class CategoryPlayListPage extends StatelessWidget {
       backgroundColor: Colors.black,
       appBar: MyAppbar(),
       body: Padding(
-        padding: EdgeInsets.all(8.h),
+        padding: EdgeInsets.all(8),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -25,7 +25,7 @@ class CategoryPlayListPage extends StatelessWidget {
                 title:
                     "${spotifyProviderWatcher.selectedCategory.name}: Playlist ",
                 multiline: true),
-            SizedBox(height: 15.h),
+            SizedBox(height: 15),
             Playlist(playlist: spotifyProviderWatcher.playlist)
           ],
         ),

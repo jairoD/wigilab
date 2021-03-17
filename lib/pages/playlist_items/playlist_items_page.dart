@@ -21,14 +21,14 @@ class PlaylistItemsPage extends StatelessWidget {
             iconTheme: IconThemeData(color: Colors.white),
             pinned: true,
             backgroundColor: Colors.black,
-            expandedHeight: 250.h,
-            toolbarHeight: 50.h,
+            expandedHeight: 250,
+            toolbarHeight: 50,
             flexibleSpace: FlexibleSpaceBar(
               background: MyImage(
                   url: spotifyProviderWatcher.playlistSelected.images[0].url),
               centerTitle: true,
               title: Container(
-                padding: EdgeInsets.all(2.w),
+                padding: EdgeInsets.all(2),
                 color: Colors.black,
                 child: BoxTitle(
                     title: spotifyProviderWatcher.playlistSelected.name,

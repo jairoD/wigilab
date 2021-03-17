@@ -24,17 +24,17 @@ class UserInfoForm extends StatelessWidget {
             controller: nameController,
             labelText: "Nombre",
             keyboardType: TextInputType.text),
-        SizedBox(height: 10.h),
+        SizedBox(height: 10),
         MyTextField(
             controller: lastNameController,
             labelText: "Apellido",
             keyboardType: TextInputType.text),
-        SizedBox(height: 10.h),
+        SizedBox(height: 10),
         MyTextField(
             controller: documentController,
             labelText: "Documento",
             keyboardType: TextInputType.text),
-        SizedBox(height: 10.h),
+        SizedBox(height: 10),
         MyButton(
             width: double.infinity,
             text: "Actualizar informacion",

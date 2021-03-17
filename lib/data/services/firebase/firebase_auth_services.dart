@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:wigilab_test/data/services/firebase/firebase_firestore_services.dart';
 
@@ -54,6 +55,24 @@ class FirebaseAuthServices {
     } catch (e) {
       return null;
     }
+  }
+
+  Future<UserCredential> firebaseFacebookLogin() async {
+    // Trigger the sign-in flow
+    final AccessToken result = await FacebookAuth.instance.login();
+
+    // Create a credential from the access token
+    final FacebookAuthCredential facebookAuthCredential =
+        FacebookAuthProvider.credential(result.token);
+
+    // Once signed in, return the UserCredential
+
+    final loginResponse = await FirebaseAuth.instance
+        .signInWithCredential(facebookAuthCredential);
+    if (loginResponse.additionalUserInfo.isNewUser)
+      await FirebaseFirestoreServices()
+          .firebaseCreateUserInitialData(loginResponse.user.uid);
+    return loginResponse;
   }
 
   User firebaseCurrentUser() {

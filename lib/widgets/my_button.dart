@@ -24,16 +24,16 @@ class MyButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 35.h,
+      height: 35,
       width: width,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(5.h)),
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
             primary: backgroundColor ?? Colors.white,
             onPrimary: textColor ?? Colors.black,
-            padding: EdgeInsets.symmetric(horizontal: 18.h),
-            textStyle: TextStyle(fontSize: 14.h)),
+            padding: EdgeInsets.symmetric(horizontal: 18),
+            textStyle: TextStyle(fontSize: 14)),
         onPressed: function,
         child: Row(
           mainAxisAlignment: icon == null && faicon == null

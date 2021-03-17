@@ -26,9 +26,9 @@ class PlaylistItemBox extends StatelessWidget {
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),
-            SizedBox(height: 15.h),
+            SizedBox(height: 15),
             Expanded(child: MyImage(url: song.track.album.images[0].url)),
-            SizedBox(height: 5.h),
+            SizedBox(height: 5),
             buildArtist()
           ],
         ),

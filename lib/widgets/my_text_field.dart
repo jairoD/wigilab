@@ -32,10 +32,10 @@ class MyTextField extends StatelessWidget {
           focusColor: Colors.red,
           hoverColor: Colors.red,
           focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(5.h),
+              borderRadius: BorderRadius.circular(5),
               borderSide: BorderSide(color: Colors.white)),
           enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(5.h),
+              borderRadius: BorderRadius.circular(5),
               borderSide: BorderSide(color: Colors.white)),
           labelText: labelText,
           labelStyle: TextStyle(color: Colors.white)),

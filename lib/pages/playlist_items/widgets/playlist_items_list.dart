@@ -10,11 +10,11 @@ class PlaylistItemsList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 190.h,
+      height: 190,
       width: double.infinity,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
-        separatorBuilder: (context, index) => SizedBox(width: 5.w),
+        separatorBuilder: (context, index) => SizedBox(width: 5),
         itemCount: items.length,
         itemBuilder: (context, index) => PlaylistItemBox(song: items[index]),
       ),

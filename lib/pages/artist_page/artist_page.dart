@@ -37,18 +37,18 @@ class ArtistPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(height: 15.h),
+                      SizedBox(height: 15),
                       MyTitle(
                         title: spotifyProviderWatcher.artistSelected.name,
                         multiline: false,
                       ),
-                      SizedBox(height: 15.h),
+                      SizedBox(height: 15),
                       BoxTitle(
                         title:
                             "Popularidad: ${spotifyProviderWatcher.artistSelected.popularity}",
                         multiline: false,
                       ),
-                      SizedBox(height: 10.h),
+                      SizedBox(height: 10),
                       MyTitle(
                         title: "Albumes: ",
                         multiline: false,
@@ -66,7 +66,7 @@ class ArtistPage extends StatelessWidget {
                           return buildAlbums(snapshot.data);
                         },
                       ),
-                      SizedBox(height: 15.h),
+                      SizedBox(height: 15),
                       MyTitle(
                         title: "Géneros: ",
                         multiline: false,
@@ -96,13 +96,13 @@ class ArtistPage extends StatelessWidget {
 
   Widget buildGenres(List<String> genres) {
     return Container(
-      height: 30.h,
-      margin: EdgeInsets.only(top: 5.h),
+      height: 30,
+      margin: EdgeInsets.only(top: 5),
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: genres.length,
         itemBuilder: (context, index) => Container(
-          padding: EdgeInsets.symmetric(horizontal: 5.h),
+          padding: EdgeInsets.symmetric(horizontal: 5),
           child: Chip(
               label: Text(
             genres[index],
@@ -115,13 +115,13 @@ class ArtistPage extends StatelessWidget {
 
   Widget buildAlbums(List<Album> albums) {
     return Container(
-      height: 30.h,
-      margin: EdgeInsets.only(top: 5.h),
+      height: 30,
+      margin: EdgeInsets.only(top: 5),
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: albums.length,
         itemBuilder: (context, index) => Container(
-          padding: EdgeInsets.symmetric(horizontal: 5.h),
+          padding: EdgeInsets.symmetric(horizontal: 5),
           child: Chip(
               label: Text(
             albums[index].name,
@@ -147,19 +147,19 @@ class ArtistPage extends StatelessWidget {
             children: [
               Text(
                 "# ${(i ~/ 2) + 1}",
-                style: TextStyle(fontSize: 14.h, color: Colors.white),
+                style: TextStyle(fontSize: 14, color: Colors.white),
               ),
             ],
           ),
           title: Text(
             mytracks[i ~/ 2].name,
-            style: TextStyle(fontSize: 20.h, color: Colors.white),
+            style: TextStyle(fontSize: 20, color: Colors.white),
           ),
           trailing: IconButton(
               icon: Icon(
                 Icons.play_circle_outline_rounded,
                 color: Colors.white,
-                size: 30.w,
+                size: 30,
               ),
               onPressed: () => print("object")),
         ));

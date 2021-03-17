@@ -12,12 +12,12 @@ class Box extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 150.w,
+      width: 150,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           BoxTitle(title: title, multiline: false),
-          SizedBox(height: 5.w),
+          SizedBox(height: 5),
           Expanded(
             child: MyImage(url: url),
           )
