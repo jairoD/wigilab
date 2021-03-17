@@ -11,20 +11,23 @@ class RegisterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[200],
+      backgroundColor: Colors.grey[400],
       body: Center(
         child: Container(
           margin: EdgeInsets.all(15),
           padding: EdgeInsets.all(15),
           decoration: BoxDecoration(
-              color: Colors.white, borderRadius: BorderRadius.circular(5)),
+              color: Colors.black, borderRadius: BorderRadius.circular(5)),
           constraints: BoxConstraints(maxHeight: 500, maxWidth: 300),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Text(
                 "Registrar",
-                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
               ),
               MyTextField(
                   labelText: "Email",
